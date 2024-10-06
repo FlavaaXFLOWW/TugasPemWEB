@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Legends Page Design</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1a1b25;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      .container {
+        padding: 20px;
+        max-width: 480px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .header {
+        position: relative;
+      }
+
+      .header img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .header h1 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 36px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-item h3 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .stat-item p {
+        margin: 5px 0;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .follow-btn {
+        background-color: #00ff00;
+        padding: 12px 30px;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+
+      .live-section {
+        margin-top: 30px;
+      }
+
+      .live-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .live-header h2 {
+        font-size: 22px;
+      }
+
+      .see-all {
+        font-size: 16px;
+        color: #00ff00;
+        cursor: pointer;
+      }
+
+      .live-card {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 15px;
+        transition: background 0.3s ease;
+      }
+
+      .live-card img {
+        border-radius: 15px;
+        width: 100px;
+        height: 70px;
+        object-fit: cover;
+      }
+
+      .live-card h3 {
+        font-size: 18px;
+        margin-left: 15px;
+      }
+
+      .live-card:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #14151a;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .footer img {
+        width: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Game Header Section -->
+      <div class="header">
+        <img
+          src="https://via.placeholder.com/800x250.png?text=Mobile+Legends+Banner"
+          alt="Mobile Legends Banner"
+        />
+        <h1>Mobile Legends</h1>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats">
+        <div class="stat-item">
+          <h3>10M</h3>
+          <p>Followers</p>
+        </div>
+        <div class="stat-item">
+          <h3>25M</h3>
+          <p>Players</p>
+        </div>
+        <div class="stat-item">
+          <h3>5K</h3>
+          <p>Streamers</p>
+        </div>
+      </div>
+
+      <!-- Follow Button -->
+      <button class="follow-btn">Follow</button>
+
+      <!-- Live Streams Section -->
+      <div class="live-section">
+        <div class="live-header">
+          <h2>Lives</h2>
+          <span class="see-all">See all</span>
+        </div>
+
+        <!-- Live Stream Card 1 -->
+        <div class="live-card">
+          <img
+            src="https://via.placeholder.com/100x70.png?text=Live+Stream+1"
+            alt="Live Stream Thumbnail"
+          />
+          <h3>Exciting Mobile Legends Match</h3>
+        </div>
+
+        <!-- Live Stream Card 2 -->
+        <div class="live-card">
+          <img
+            src="https://via.placeholder.com/100x70.png?text=Live+Stream+2"
+            alt="Live Stream Thumbnail"
+          />
+          <h3>Pro Tournament Highlights</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Navigation -->
+    <div class="footer">
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/home.png"
+        alt="Home"
+        onclick="location.href='index.html'"
+      />
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/search.png"
+        alt="Search"
+      />
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/camera.png"
+        alt="Live"
+      />
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/user.png"
+        alt="Profile"
+        onclick="location.href='TrendingGames/mobilelegends.html'"
+      />
+    </div>
+  </body>
+</html>

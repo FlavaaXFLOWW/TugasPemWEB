@@ -1,0 +1,351 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
+  padding-bottom: 80px; /* To make space for the footer */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  margin-left: 10px;
+  width: 100px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.user p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.categories button {
+  padding: 10px 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.categories button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.section-title h2 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.section-title a {
+  color: #00ff00;
+  font-size: 14px;
+}
+
+/* Game Cards */
+.games-grid img {
+  width: 180px; /* Lebar gambar */
+  height: 200px; /* Tinggi gambar */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  border-radius: 15px; /* Menjaga sudut bulat pada gambar */
+}
+
+.game-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  min-width: 150px;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.game-card p {
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.game-card small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* New Games Section */
+.new-games-grid {
+  display: flex;
+  flex-direction: column; /* Menampilkan game secara vertikal */
+  gap: 10px; /* Jarak antar game */
+  overflow-y: auto; /* Mengizinkan scroll vertikal */
+  max-height: 500px; /* Atur tinggi maksimal sesuai kebutuhan */
+  max-width: 2000px;
+  padding-bottom: 100px; /* Ruang di bagian bawah */
+  padding: 100px; /* Ruang di bagian atas dan bawah */
+  background-color: rgba(255, 255, 255, 0.1); /* Latar belakang */
+  border-radius: 40px; /* Sudut membulat */
+}
+
+.new-game-card {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  align-items: center; /* Vertically center the items */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer; /* Menambahkan cursor pointer */
+}
+
+.new-game-card img {
+  width: 30%; /* Atur ukuran gambar */
+  border-radius: 15px;
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.new-game-card div {
+  flex: 1; /* Memastikan konten teks mengisi sisa ruang */
+}
+
+.new-game-card p {
+  margin: 0; /* Hapus margin untuk p */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.new-game-card small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.profile-container {
+  width: 375px;
+  margin: 20px auto;
+  background-image: url("profile/backgroundprofil.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+}
+
+.profile-header {
+  position: relative;
+  text-align: center;
+}
+
+.background-img {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid white;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 40px);
+}
+
+.profile-info {
+  padding: 60px 20px 20px;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+}
+
+.profile-info p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.games {
+  margin: 10px 0;
+}
+
+.game-btn {
+  background-color: #444;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 5px 15px;
+  margin: 0 5px;
+}
+
+.valorant {
+  background-color: #ff416c;
+}
+
+.cod {
+  background-color: #647dee;
+}
+
+.apex {
+  background-color: #ffc300;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.recent-streams {
+  padding: 20px;
+}
+
+.recent-streams h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.stream {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stream img {
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.stream p {
+  flex: 1;
+  font-size: 14px;
+}
+
+.stream span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Footer Navigation */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a2e;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.footer img {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}

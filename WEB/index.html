@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #141e30, #243b55);
+        color: white;
+        overflow-x: hidden;
+      }
+
+      .container {
+        padding: 20px;
+        padding-bottom: 80px; /* Untuk memberi ruang pada footer */
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .search {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .header input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        margin-left: 10px;
+        width: 100px;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        cursor: pointer; /* Menambahkan cursor pointer untuk interaksi */
+      }
+
+      .user img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+      }
+
+      .user p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      /* Categories */
+      .categories {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .categories button {
+        padding: 10px 25px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .categories button:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+      .section-title h2 {
+        font-size: 18px;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .section-title a {
+        color: #00ff00;
+        font-size: 14px;
+      }
+
+      /* Game Cards */
+      .games-grid {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto; /* Izinkan scroll horizontal */
+        padding-bottom: 20px;
+        white-space: nowrap; /* Mencegah pemecahan baris */
+      }
+
+      .game-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        min-width: 150px;
+        cursor: pointer; /* Menambahkan cursor pointer */
+      }
+
+      .game-card img {
+        width: 100%; /* Ukuran gambar di sini */
+        border-radius: 15px;
+        margin-bottom: 10px;
+      }
+
+      .game-card p {
+        font-size: 14px;
+        margin: 5px 0;
+        font-weight: bold;
+      }
+
+      .game-card small {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* New Games Section */
+      .new-games {
+        display: flex;
+        flex-direction: column; /* Menampilkan game secara vertikal */
+        gap: 1px;
+        padding-bottom: 1px;
+      }
+
+      .new-game-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer; /* Menambahkan cursor pointer */
+      }
+
+      .new-game-card img {
+        width: 20%; /* Ukuran gambar di sini */
+        border-radius: 15px;
+        margin-bottom: 15px;
+      }
+
+      /* Footer Navigation */
+      .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #1a1a2e;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+      }
+
+      .footer img {
+        width: 30px;
+        cursor: pointer;
+      }
+
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="user" onclick="location.href='profile.html'">
+          <!-- Mengarahkan ke profil saat diklik -->
+          <p>FlavaXFLOWWW</p>
+          <img
+            src="profile/rian.jpg"
+            alt="User Icon"
+          />
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="categories">
+        <button>Action</button>
+        <button>Shooting</button>
+        <button>Adventure</button>
+        <button>Strategy</button>
+      </div>
+
+<!-- Trending Games -->
+<div class="section-title">
+  <h2>Trending Games</h2>
+  <a href="#">See all</a>
+</div>
+<div class="games-grid">
+  <div class="game-card" onclick="location.href='TrendingGames/valorant.html'">
+    <img src="thumbnail/valorant.jpg" />
+    <p>Valorant</p>
+    <small>Shooter</small>
+  </div>
+  <div class="game-card" onclick="location.href='TrendingGames/dota2.html'">
+    <img src="thumbnail/dota2.jpeg" />
+    <p>Dota 2</p>
+    <small>MOBA</small>
+  </div>
+  <div class="game-card" onclick="location.href='TrendingGames/fortnite.html'">
+    <img src="thumbnail/fortnite.png" />
+    <p>Fortnite</p>
+    <small>Battle Royale</small>
+  </div>
+  <div class="game-card" onclick="location.href='TrendingGames/apexlegends.html'">
+    <img src="thumbnail/apexlegends.jpg" />
+    <p>Apex Legends</p>
+    <small>Battle Royale</small>
+  </div>
+  <div class="game-card" onclick="location.href='TrendingGames/callofduty.html'">
+    <img src="thumbnail/callofduty.jpg" />
+    <p>Call of Duty</p>
+    <small>FPS</small>
+  </div>
+  <div class="game-card" onclick="location.href='TrendingGames/leagueoflegends.html'">
+    <img src="thumbnail/leagueoflegends.jpeg" />
+    <p>League of Legends</p>
+    <small>MOBA</small>
+  </div>
+  <div class="game-card" onclick="location.href='TrendingGames/pubg.html'">
+    <img src="thumbnail/pubg.jpg" />
+    <p>PUBG</p>
+    <small>Battle Royale</small>
+  </div>
+  <div class="game-card" onclick="location.href='TrendingGames/minecraft.html'">
+    <img src="thumbnail/minecraft.jpg" />
+    <p>Minecraft</p>
+    <small>Sandbox</small>
+  </div>
+</div>
+      <!-- New Games Section -->
+      <div class="section-title">
+        <h2>New Games</h2>
+        <a href="#">See all</a>
+      </div>
+      <div class="new-games-grid">
+        <div class="new-game-card" onclick="location.href='NewGames/mobilelegends.html'">
+          <img
+            src="thumbnail/mobilelegends.jpg"
+          />
+          <div>
+            <p>Mobile Legends: Bang Bang</p>
+            <small>MOBA</small>
+          </div>
+        </div>
+        <div class="new-game-card" onclick="location.href='NewGames/honorofkings.html'">
+          <img
+            src="thumbnail/honorofking.jpg"
+          />
+          <div>
+            <p>Honor of Kings</p>
+            <small>MOBA</small>
+          </div>
+        </div>
+        <div class="new-game-card" onclick="location.href='NewGames/genshinimpact.html'">
+          <img
+            src="thumbnail/genshinimpact.jpg"
+          />
+          <div>
+            <p>Genshin Impact</p>
+            <small>Action RPG</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Footer Navigation -->
+        <div class="footer">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Home"
+          onclick="location.href='index.html'"
+          <!-- Ganti 'index.html' dengan nama file homepage Anda -->
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/search.png"
+            alt="Search"
+          />
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/camera.png"
+            alt="Live"
+          />
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/user.png"
+            alt="Profile"
+            onclick="location.href='profile.html'"
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>
